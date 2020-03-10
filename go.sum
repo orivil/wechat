@@ -1,0 +1,6 @@
+github.com/google/go-querystring v1.0.0 h1:Xkwi/a1rcvNg1PPYe5vI8GbeBY/jrVuDX5ASuANWTrk=
+github.com/google/go-querystring v1.0.0/go.mod h1:odCYkC5MyYFN7vkCjXpyrEuKhc/BUO6wN/zVPAxq5ck=
+github.com/orivil/utils v0.0.0-20200310053055-00f8e83cbd0b h1:v4WqjdFrnulw5/06Ax1wUSSX5rNQDvd1gi/yQFAN99k=
+github.com/orivil/utils v0.0.0-20200310053055-00f8e83cbd0b/go.mod h1:0y2DcwxRC/p2oLhwr247tPLbhe0nsMiaUWAVHhOeReo=
+github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
+github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
