@@ -11,6 +11,7 @@ import (
 	"github.com/google/go-querystring/query"
 	"hash"
 	"io"
+	"net/url"
 	"sort"
 	"strings"
 )
@@ -49,6 +50,14 @@ func SignSchema(schema interface{}, mod hash.Hash, key string) (sign string, err
 	mod.Write([]byte(kv))
 	cipherStr := mod.Sum(nil)
 	return strings.ToUpper(hex.EncodeToString(cipherStr)), nil
+}
+
+// 检查是否是微信服务器发送的消息
+func CheckSignature(vs url.Values, token string) bool {
+	signature := vs.Get("signature")
+	timestamp := vs.Get("timestamp")
+	nonce := vs.Get("nonce")
+	return SignParams(token, timestamp, nonce) == signature
 }
 
 // 生成请求参数签名, 当本地服务器送加密消息到服务器时, 需要加入签名数据已确保该消息不是第三方发送的消息
