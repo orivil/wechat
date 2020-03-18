@@ -23,6 +23,17 @@ type Storage struct {
 	ComponentAccessToken ExpireDataStorage
 }
 
+func NewStorage(dt DataStorage, edt ExpireDataStorage) *Storage {
+	return &Storage{
+		VerifyTicket:dt,
+		PureAuthCode:edt,
+		AppAccessToken:edt,
+		AppTicket:edt,
+		UserAccessToken:edt,
+		ComponentAccessToken:edt,
+	}
+}
+
 // 永久数据读写接口
 type DataStorage interface {
 	Store(key, value string) error
